@@ -1,0 +1,12 @@
+services:
+  identidad:
+    build: ./src   
+    ports:
+      - "8082:80"
+    container_name: identidad
+    networks:
+      - kong-net
+
+networks:
+  kong-net:
+    external: true
